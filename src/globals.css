@@ -1,81 +1,115 @@
-
-
-body{
+body {
     background: #000;
     color: white;
     overflow-x: hidden;
 }
 
-.gallery:hover .gallery-1{
+.gallery:hover .gallery-1 {
     opacity: 1;
     transform: translateY(0px);
     visibility: visible;
 }
 
-li{
+li {
     color: gray;
-    
+
 }
 
-.sub:hover .gallery-2{
+.sub:hover .gallery-2 {
     opacity: 1;
     transform: translateY(0px);
     visibility: visible;
 }
 
 
-.gallery-1,.gallery-2{
-opacity: 0;
+.gallery-1,
+.gallery-2 {
+    opacity: 0;
     transform: translateY(20px);
     visibility: hidden;
     transition: all 0.8s;
-    background:rgb(29, 29, 29);
+    background: rgb(29, 29, 29);
     color: white;
 }
 
-.toggle{
-    display:none;
-}
-
-
-.close{
+.toggle {
     display: none;
 }
 
-.name{
-    position:relative;
+
+.close {
+    display: none;
 }
 
-.name::before{
-    content:'';
-    position:absolute;
-    width:100%;
-    height:50%;
+.name {
+    position: relative;
+}
+
+.name::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
     background: #27A776;
-    bottom:0;
+    bottom: 0;
     z-index: -1;
 }
 
 
-@media only screen and (max-width:1000px){
-    .toggle{
+.overlay {
+    transition: all 0.3s;
+    z-index: 3222;
+}
+
+
+.touch {
+    overflow: hidden;
+}
+
+.touch:hover .overlay {
+    opacity: 1 !important;
+}
+
+.photo {
+    transition: all 0.4s;
+}
+
+.touch:hover .photo {
+    scale: 1.1;
+}
+
+
+.icons {
+    transform: translateY(20px);
+    transition: all 0.8s;
+}
+
+.touch:hover .icons {
+    transform: translateY(0);
+}
+
+
+
+
+@media only screen and (max-width:1000px) {
+    .toggle {
         display: block;
     }
 
-    .my-items{
+    .my-items {
         flex-direction: column !important;
-        background:rgb(29, 29, 29);
+        background: rgb(29, 29, 29);
         top: 0;
         width: 40vw;
         right: 0;
-        height:100vh;
-        position:absolute;
-        transform:translateX(100%);
+        height: 100vh;
+        position: absolute;
+        transform: translateX(100%);
         transition: all 0.9s;
 
     }
 
-    .close{
+    .close {
         display: block;
     }
 }

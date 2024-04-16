@@ -4,9 +4,11 @@ import Front from '../components/Front'
 import Photos from '../components/Photos'
 
 const Home = () => {
+
+
+
     return (
         <>
-            <Header />
             <Front />
             <Photos />
         </>

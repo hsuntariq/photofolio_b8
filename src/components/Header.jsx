@@ -4,6 +4,7 @@ import { MdFilterList } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
 
 import '../globals.css'
+import { Link } from 'react-router-dom';
 const Header = () => {
     const showMenu = useRef();
 
@@ -26,7 +27,7 @@ const Header = () => {
                     <ul ref={showMenu} className="d-flex my-items p-0 m-0 list-unstyled gap-2 text-uppercase">
                         <IoCloseOutline onClick={hide} className='close ms-auto text-danger' size={30} cursor="pointer" />
                         <li>home</li>
-                        <li>About</li>
+                        <Link to='/about'>About</Link>
 
                         <li className="position-relative gallery">
                             gallery
